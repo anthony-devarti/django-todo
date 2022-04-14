@@ -7,7 +7,6 @@ class Todo(models.Model):
     pub_date = models.DateTimeField(auto_now=True)
     description = models.CharField(max_length=200, null=False, default='Something to do.')
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True)
-    # priority = models.ForeignKey('Priority', on_delete=models.CASCADE, null=True)
     # due = models.DateTimeField()
     # reminder_timeframe = models.TimeField()
     STATUS_CHOICES = {
@@ -49,7 +48,7 @@ class Category(models.Model):
     #     default='blue',
     # )
     favorite = models.BooleanField(default=False)
-    # user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     def __str__(self):
         return self.name
     class Meta:
@@ -58,7 +57,7 @@ class Category(models.Model):
 class Event(models.Model):
     description = models.CharField(max_length=200, null=False)
     ##uncommenting this next line breaks the app
-    # category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True)
     event_time = models.DateTimeField(null=True)
     # reminder_timeframe = models.DateTimeField()
     location = models.CharField(max_length=200, null=True)

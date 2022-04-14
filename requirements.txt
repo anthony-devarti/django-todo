@@ -19,6 +19,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 distlib==0.3.4
 Django==4.0.4
+djangorestframework==3.13.1
 docutils==0.18.1
 entrypoints==0.4
 executing==0.8.3
@@ -63,9 +64,11 @@ pickleshare==0.7.5
 pipenv==2022.1.8
 pkginfo==1.8.2
 platformdirs==2.5.1
+postgres==4.0
 prometheus-client==0.13.1
 prompt-toolkit==3.0.28
-psycopg2==2.9.3
+psycopg2-binary==2.9.3
+psycopg2-pool==1.1
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycodestyle==2.8.0
@@ -78,6 +81,7 @@ pylint==2.12.2
 pyparsing==3.0.7
 pyrsistent==0.18.1
 python-dateutil==2.8.2
+pytz==2022.1
 PyYAML==6.0
 pyzmq==22.3.0
 readme-renderer==33.0
