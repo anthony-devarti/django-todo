@@ -8,14 +8,14 @@ from .models import Todo, Event
 # Create your views here.
 class TodoViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows Todos to be viewed or edited.
     """
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
 
 class EventViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows Events to be viewed or edited.
     """
     queryset = Event.objects.all()
     serializer_class = EventSerializer
